@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.uberclone">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.driver.HistoryBookingDetailDriver"></activity>
+        <activity android:name=".activities.client.HistoryBookingDetailClient" />
+        <activity
+            android:name=".activities.driver.HistoryBookingDriver"
+            android:parentActivityName=".activities.driver.MapDriver" />
+        <activity
+            android:name=".activities.client.HistoryBookingClient"
+            android:parentActivityName=".activities.client.MapClient" />
+        <activity
+            android:name=".activities.driver.UpdateProfileDriver"
+            android:parentActivityName=".activities.driver.MapDriver" />
+        <activity
+            android:name=".activities.client.UpdateProfile"
+            android:parentActivityName=".activities.client.MapClient" />
+        <activity android:name=".activities.driver.NotificationBooking" />
+        <activity android:name=".activities.client.CalificationDriver" />
+        <activity android:name=".activities.driver.CalificationClient" />
+        <activity android:name=".activities.driver.MapDriverBooking" />
+        <activity android:name=".activities.client.MapClientBooking" />
+
+        <receiver
+            android:name=".receivers.AcceptReceiver"
+            android:enabled="true" />
+        <receiver
+            android:name=".receivers.CancelReceiver"
+            android:enabled="true" />
+
+        <service android:name=".services.MyFirebaseMessagingClient">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".activities.client.RequestDriver" />
+        <activity
+            android:name=".activities.client.DetailRequestActivity"
+            android:parentActivityName=".activities.client.MapClient" />
+        <activity android:name=".activities.driver.MapDriver" />
+        <activity android:name=".activities.client.MapClient" />
+        <activity
+            android:name=".activities.driver.RegisterDriver"
+            android:parentActivityName=".activities.SelectOptionAuth" />
+        <activity
+            android:name=".activities.login"
+            android:parentActivityName=".activities.SelectOptionAuth" />
+        <activity
+            android:name=".activities.client.Registrer"
+            android:parentActivityName=".activities.SelectOptionAuth" />
+        <activity
+            android:name=".activities.SelectOptionAuth"
+            android:parentActivityName=".activities.MainActivity" />
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+    </application>
+
+</manifest>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.client.DetailRequestActivity">
+
+
+    <include layout="@layout/action_bar_toolbar"></include>
+
+
+    <fragment
+
+        android:id="@+id/map_client"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_marginBottom="165dp">
+
+    </fragment>
+
+    <com.github.florent37.shapeofview.shapes.BubbleView
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        app:shape_bubble_arrowHeight="15dp"
+        app:shape_bubble_arrowWidth="15dp"
+        app:shape_bubble_arrowPosition="top"
+        app:shape_bubble_borderRadius="20dp"
+        android:layout_gravity="bottom"
+        >
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center|left"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Origen: "
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/textViewOrigin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="16sp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center|left"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Destino: "
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/textViewDestination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="16sp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center|left"
+                android:layout_marginLeft="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tiempo: "
+                        android:textSize="16sp"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/textViewTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Distancia: "
+                        android:textColor="#ffffff"
+                        android:textSize="16sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/textViewDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp">
+
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- YOUR CONTENT -->
+
+    </com.github.florent37.shapeofview.shapes.BubbleView>
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/btnRequestNow"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Solicitar ahora"
+        android:background="@drawable/boton_redondeado"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffff">
+
+    </Button>
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

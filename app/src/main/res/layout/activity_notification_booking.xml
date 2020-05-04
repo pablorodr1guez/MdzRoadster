@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.driver.NotificationBooking"
+    android:fitsSystemWindows="true">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.github.florent37.shapeofview.shapes.DiagonalView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:elevation="4dp"
+                app:shape_diagonal_angle="10"
+                app:shape_diagonal_direction="left"
+                app:shape_diagonal_position="bottom">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary" />
+
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/iconmap"
+                    android:layout_gravity="center|top">
+
+                </ImageView>
+
+                <!-- YOUR CONTENT -->
+
+            </com.github.florent37.shapeofview.shapes.DiagonalView>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Desde"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="#000000"
+                android:layout_marginTop="20dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/originCalification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calle n avenida n"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:layout_marginTop="5dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hasta"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:textColor="#000000"
+                android:layout_marginTop="20dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/DestinationCalification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calle n avenida n"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:layout_marginTop="5dp">
+
+            </TextView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tiempo de llegada"
+                        android:textSize="18sp"
+                        android:textColor="#000000">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/textViewMins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 mins">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Distancia"
+                        android:textSize="18sp"
+                        android:textColor="#000000">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/textViewkms"
+                        android:layout_width="197dp"
+                        android:layout_height="243dp"
+                        android:text="0 kms">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/textViewCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textSize="60sp"
+                android:textAlignment="center"
+                android:layout_marginTop="40dp">
+
+            </TextView>
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_margin="20dp">
+
+            <Button
+                android:id="@+id/btn_acceptBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aceptar"
+                android:background="@drawable/boton_redondeado"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"></Button>
+
+            <Button
+                android:id="@+id/btn_cancelBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Cancelar"
+                android:background="@drawable/boton_redondeado"
+                android:backgroundTint="#fd3939"
+                android:textColor="#ffffff"
+                android:layout_weight="1"></Button>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
